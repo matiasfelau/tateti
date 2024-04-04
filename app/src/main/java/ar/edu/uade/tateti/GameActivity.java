@@ -84,7 +84,7 @@ public class GameActivity extends AppCompatActivity {
     private void controloBoton(View v){
         if (esMiTurno){
             Button selec = (Button) v;
-            if(ficha.equalsIgnoreCase("ciuculos"))
+            if(ficha.equalsIgnoreCase("circulos"))
                 selec.setText("0");
             else
                 selec.setText("X");
