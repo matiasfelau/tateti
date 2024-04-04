@@ -1,4 +1,4 @@
-package ar.edu.uade.tateti.activities;
+package ar.edu.uade.tateti;
 
 public class GameActivity {
 }
