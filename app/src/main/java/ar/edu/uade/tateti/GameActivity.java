@@ -13,7 +13,7 @@ public class GameActivity extends AppCompatActivity {
 
     TextView Jugador, Ganador;
 
-    Button botonCentro, botonCentroArriba, botonCentroAbajo, botonCentroIzquierda, botonCentroDerecha, botonArribaDerecha, botonArribaIzquierda, botonAbajoDerecha, botonAbajoIzquierda;
+    Button botonCentro, botonSuperiorCentral, botonInferiorCentral, botonCentroIzquierda, botonCentroDerecha, botonSuperiorDerecha, botonSuperiorIzquierda, botonInferiorDerecha, botonInferiorIzquierda;
 
     String n, ficha;
 
@@ -33,55 +33,55 @@ public class GameActivity extends AppCompatActivity {
         Jugador = (TextView) findViewById(R.id.Jugador);
         Jugador.setText(n + "juega con" + ficha);
         botonCentro = (Button) findViewById(R.id.botonCentro);
-        botonCentroArriba = (Button) findViewById(R.id.botonCentroArriba);
-        botonCentroAbajo = (Button) findViewById(R.id.botonCentroAbajo);
+        botonSuperiorCentral = (Button) findViewById(R.id.botonSuperiorCentral);
+        botonInferiorCentral = (Button) findViewById(R.id.botonInferiorCentral);
         botonCentroDerecha = (Button) findViewById(R.id.botonCentroDerecha);
         botonCentroIzquierda = (Button) findViewById(R.id.botonCentroIzquierda);
-        botonArribaDerecha = (Button) findViewById(R.id.botonArribaDerecha);
-        botonArribaIzquierda = (Button) findViewById(R.id.botonArribaIzquierda);
-        botonAbajoDerecha = (Button) findViewById(R.id.botonAbajoDerecha);
-        botonAbajoIzquierda = (Button) findViewById(R.id.botonAbajoIzquierda);
+        botonSuperiorDerecha = (Button) findViewById(R.id.botonSuperiorDerecha);
+        botonSuperiorIzquierda = (Button) findViewById(R.id.botonSuperiorIzquierda);
+        botonInferiorDerecha = (Button) findViewById(R.id.botonInferiorDerecha);
+        botonInferiorIzquierda = (Button) findViewById(R.id.botonInferiorIzquierda);
         Ganador = (TextView) findViewById(R.id.Ganador);
 
-        botonArribaIzquierda.setOnClickListener(new View.OnClickListener() {
+        botonSuperiorIzquierda.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v); }
+            public void onClick(View v) { controloBoton(v,0,0); }
         });
-        botonCentroArriba.setOnClickListener(new View.OnClickListener() {
+        botonSuperiorCentral.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v); }
+            public void onClick(View v) { controloBoton(v,0,1); }
         });
-        botonArribaDerecha.setOnClickListener(new View.OnClickListener() {
+        botonSuperiorDerecha.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v); }
+            public void onClick(View v) { controloBoton(v,0,2); }
         });
         botonCentroIzquierda.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v); }
+            public void onClick(View v) { controloBoton(v,1,0); }
         });
         botonCentro.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v); }
+            public void onClick(View v) { controloBoton(v, 1 ,1 ); }
         });
-        botonAbajoIzquierda.setOnClickListener(new View.OnClickListener() {
+        botonInferiorIzquierda.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v); }
+            public void onClick(View v) { controloBoton(v,2 , 0); }
         });
         botonCentroDerecha.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v); }
+            public void onClick(View v) { controloBoton(v, 1,2); }
         });
-        botonCentroAbajo.setOnClickListener(new View.OnClickListener() {
+        botonInferiorCentral.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v); }
+            public void onClick(View v) { controloBoton(v, 2, 1); }
         });
-        botonAbajoDerecha.setOnClickListener(new View.OnClickListener() {
+        botonInferiorDerecha.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v); }
+            public void onClick(View v) { controloBoton(v,2 , 2); }
         });
     }
 
-    private void controloBoton(View v){
+    private void controloBoton(View v, int x, int y){
         if (esMiTurno){
             Button selec = (Button) v;
             if(ficha.equalsIgnoreCase("circulos"))
@@ -90,12 +90,11 @@ public class GameActivity extends AppCompatActivity {
                 selec.setText("X");
             esMiTurno = false;
             selec.setEnabled(false);
-            cdj.asignarValorJugado(1,1,ficha);
-            if (cdj.gano()){
+            if (cdj.gano(x, y,botonCentro, botonSuperiorCentral, botonInferiorCentral, botonCentroIzquierda, botonCentroDerecha, botonSuperiorDerecha, botonSuperiorIzquierda, botonInferiorDerecha, botonInferiorIzquierda)) {
                 Ganador.setText("El ganador es "+ n);
             } else {
-                cdj.proximoMovimiento();
-                if (cdj.gano()){
+                cdj.proximoMovimiento(ficha,botonCentro, botonSuperiorCentral, botonInferiorCentral, botonCentroIzquierda, botonCentroDerecha, botonSuperiorDerecha, botonSuperiorIzquierda, botonInferiorDerecha, botonInferiorIzquierda);
+                if (cdj.gano(x, y,botonCentro, botonSuperiorCentral, botonInferiorCentral, botonCentroIzquierda, botonCentroDerecha, botonSuperiorDerecha, botonSuperiorIzquierda, botonInferiorDerecha, botonInferiorIzquierda)){
                     Ganador.setText("El ganador es la maquina");
                 }
                 esMiTurno = true;
