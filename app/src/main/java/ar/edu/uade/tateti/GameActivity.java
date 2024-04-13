@@ -22,6 +22,8 @@ public class GameActivity extends AppCompatActivity {
 
     ControlDeJuego cdj;
 
+    int c;
+
     @Override
 
     protected void onCreate(Bundle savedInstanceState){
@@ -42,6 +44,7 @@ public class GameActivity extends AppCompatActivity {
         botonSuperiorIzquierda = (Button) findViewById(R.id.botonSuperiorIzquierda);
         botonInferiorDerecha = (Button) findViewById(R.id.botonInferiorDerecha);
         botonInferiorIzquierda = (Button) findViewById(R.id.botonInferiorIzquierda);
+        c = 0;
         Ganador = (TextView) findViewById(R.id.Ganador);
 
         botonSuperiorIzquierda.setOnClickListener(new View.OnClickListener() {
@@ -120,6 +123,8 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void controloBoton(View v, int x, int y){
+        c++;
+        if (c < 9)
         if (esMiTurno){
             Button selec = (Button) v;
             if(ficha.equalsIgnoreCase("circulos"))
@@ -132,10 +137,14 @@ public class GameActivity extends AppCompatActivity {
                 Ganador.setText("El ganador es "+ n);
             } else {
                 List<Integer> lugar = cdj.proximoMovimiento(ficha,botonCentro, botonSuperiorCentral, botonInferiorCentral, botonCentroIzquierda, botonCentroDerecha, botonSuperiorDerecha, botonSuperiorIzquierda, botonInferiorDerecha, botonInferiorIzquierda);
+                c++;
                 if (cdj.gano(lugar.get(0), lugar.get(1),botonCentro, botonSuperiorCentral, botonInferiorCentral, botonCentroIzquierda, botonCentroDerecha, botonSuperiorDerecha, botonSuperiorIzquierda, botonInferiorDerecha, botonInferiorIzquierda)){
                     Ganador.setText("El ganador es la maquina");
+                } else if (c == 8) {
+                    Ganador.setText("Es un empate!");
+                } else {
+                    esMiTurno = true;
                 }
-                esMiTurno = true;
             }
         }
     }
