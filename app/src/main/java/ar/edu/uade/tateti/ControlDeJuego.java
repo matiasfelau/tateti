@@ -25,21 +25,34 @@ public class ControlDeJuego {
         botones.add(botonesSuperior);
         botones.add(botonesCentral);
         botones.add(botonesInferior);
-        if (botones.get(x).get(y).getText().equals(botones.get(x+1).get(y).getText()) && botones.get(x).get(y).getText().equals(botones.get(x+2).get(y).getText())
-                || botones.get(x).get(y).getText().equals(botones.get(x-1).get(y).getText()) && botones.get(x).get(y).getText().equals(botones.get(x+1).get(y).getText()) ||
-                botones.get(x).get(y).getText().equals(botones.get(x-1).get(y).getText()) && botones.get(x).get(y).getText().equals(botones.get(x-2).get(y).getText())){
-            return true;
-        } else if (botones.get(x).get(y).getText().equals(botones.get(x).get(y+1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x).get(y+2).getText())
-                || botones.get(x).get(y).getText().equals(botones.get(x).get(y-1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x).get(y+1).getText()) ||
-                botones.get(x).get(y).getText().equals(botones.get(x).get(y-1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x).get(y-2).getText())){
-            return true;
-        } else if (botones.get(x).get(y).getText().equals(botones.get(x+1).get(y+1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x+2).get(y+2).getText())
-                || botones.get(x).get(y).getText().equals(botones.get(x-1).get(y-1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x+1).get(y+1).getText()) ||
-                botones.get(x).get(y).getText().equals(botones.get(x-1).get(y-1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x-2).get(y-2).getText())){
-            return true;
-        } else {
-            return false;
+        try {
+            if (botones.get(x).get(y).getText().equals(botones.get(x + 1).get(y).getText()) && botones.get(x).get(y).getText().equals(botones.get(x + 2).get(y).getText())
+                    || botones.get(x).get(y).getText().equals(botones.get(x - 1).get(y).getText()) && botones.get(x).get(y).getText().equals(botones.get(x + 1).get(y).getText()) ||
+                    botones.get(x).get(y).getText().equals(botones.get(x - 1).get(y).getText()) && botones.get(x).get(y).getText().equals(botones.get(x - 2).get(y).getText())) {
+                return true;
+            }
+        } catch (Exception ignored) {
         }
+
+        try {
+            if (botones.get(x).get(y).getText().equals(botones.get(x).get(y + 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x).get(y + 2).getText())
+                    || botones.get(x).get(y).getText().equals(botones.get(x).get(y - 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x).get(y + 1).getText()) ||
+                    botones.get(x).get(y).getText().equals(botones.get(x).get(y - 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x).get(y - 2).getText())) {
+                return true;
+            }
+        } catch (Exception ignored) {
+        }
+
+        try {
+            if (botones.get(x).get(y).getText().equals(botones.get(x + 1).get(y + 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x + 2).get(y + 2).getText())
+                    || botones.get(x).get(y).getText().equals(botones.get(x - 1).get(y - 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x + 1).get(y + 1).getText()) ||
+                    botones.get(x).get(y).getText().equals(botones.get(x - 1).get(y - 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x - 2).get(y - 2).getText())) {
+                return true;
+            }
+        } catch (Exception ignored) {
+        }
+
+        return false;
     }
 
     public void proximoMovimiento(String ficha, Button botonCentro, Button botonSuperiorCentral, Button botonInferiorCentral, Button botonCentroIzquierda, Button botonCentroDerecha, Button botonSuperiorDerecha, Button botonSuperiorIzquierda, Button botonInferiorDerecha, Button botonInferiorIzquierda){
