@@ -66,8 +66,8 @@ public class ControlDeJuego {
             ficha = "O";
         }
         while (true){
-            int x = aleatorio.nextInt(3);
-            int y = aleatorio.nextInt(3);
+            int x = aleatorio.nextInt(2);
+            int y = aleatorio.nextInt(2);
             if(botones.get(x).get(y).getText().equals("")){
                 botones.get(x).get(y).setText(ficha);
                 break;
