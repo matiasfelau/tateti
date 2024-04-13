@@ -26,44 +26,72 @@ public class ControlDeJuego {
         botones.add(botonesSuperior);
         botones.add(botonesCentral);
         botones.add(botonesInferior);
-        System.out.println(x);
-        System.out.println(y);
-        System.out.println(botones.get(x).get(y).getText());
-        //sout
         try {
-            System.out.println("vertical");
-            if (botones.get(x).get(y).getText().equals(botones.get(x + 1).get(y).getText()) && botones.get(x).get(y).getText().equals(botones.get(x + 2).get(y).getText())
-                    || botones.get(x).get(y).getText().equals(botones.get(x - 1).get(y).getText()) && botones.get(x).get(y).getText().equals(botones.get(x + 1).get(y).getText()) ||
-                    botones.get(x).get(y).getText().equals(botones.get(x - 1).get(y).getText()) && botones.get(x).get(y).getText().equals(botones.get(x - 2).get(y).getText())) {
-                System.out.println("si");
-                return true;
+            try {
+                if (botones.get(x).get(y).getText().charAt(0) == botones.get(x + 1).get(y).getText().charAt(0) && botones.get(x).get(y).getText().charAt(0) ==botones.get(x + 2).get(y).getText().charAt(0)) {
+                    return true;
+                }
             }
-        } catch (Exception ignored) {
-        }
+            catch (Exception ignored) {}
+            try {
+                if (botones.get(x).get(y).getText().charAt(0) == botones.get(x - 1).get(y).getText() .charAt(0) && botones.get(x).get(y).getText().charAt(0) == botones.get(x + 1).get(y).getText().charAt(0)) {
+                    return true;
+                }
+            }
+            catch (Exception ignored) {}
+            try {
+                if (botones.get(x).get(y).getText().charAt(0) == botones.get(x - 1).get(y).getText().charAt(0) && botones.get(x).get(y).getText().charAt(0) == botones.get(x - 2).get(y).getText().charAt(0)) {
+                    return true;
+                }
+            }
+            catch (Exception ignored) {}
+
+        } catch (Exception ignored) {}
 
         try {
-            System.out.println("horizontal");
-            System.out.println(botones.get(x).get(y).getText().charAt(0) == botones.get(x).get(y).getText().charAt(0));
-            if (botones.get(x).get(y).getText().equals(botones.get(x).get(y + 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x).get(y + 2).getText())
-                    || botones.get(x).get(y).getText().equals(botones.get(x).get(y - 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x).get(y + 1).getText()) ||
-                    botones.get(x).get(y).getText().equals(botones.get(x).get(y - 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x).get(y - 2).getText())) {
-                System.out.println("si");
-                return true;
+            try {
+                if (botones.get(x).get(y).getText().charAt(0) == botones.get(x).get(y + 1).getText().charAt(0) && botones.get(x).get(y).getText().charAt(0) == botones.get(x).get(y + 2).getText().charAt(0)) {
+                    return true;
+                }
             }
-        } catch (Exception ignored) {
+            catch (Exception ignored) {}
+            try {
+                if (botones.get(x).get(y).getText().charAt(0) == botones.get(x).get(y - 1).getText().charAt(0) && botones.get(x).get(y).getText().charAt(0) == botones.get(x).get(y + 1).getText().charAt(0)) {
+                    return true;
+                }
+            }
+            catch (Exception ignored) {}
+            try {
+                if (botones.get(x).get(y).getText().charAt(0) == botones.get(x).get(y - 1).getText().charAt(0) && botones.get(x).get(y).getText().charAt(0) == botones.get(x).get(y - 2).getText().charAt(0)) {
+                    return true;
+                }
+            }
+            catch (Exception ignored) {}
         }
+        catch (Exception ignored) {}
 
         try {
-            System.out.println("diagonal");
-            if (botones.get(x).get(y).getText().equals(botones.get(x + 1).get(y + 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x + 2).get(y + 2).getText())
-                    || botones.get(x).get(y).getText().equals(botones.get(x - 1).get(y - 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x + 1).get(y + 1).getText()) ||
-                    botones.get(x).get(y).getText().equals(botones.get(x - 1).get(y - 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x - 2).get(y - 2).getText())) {
-                System.out.println("si");
-                return true;
+            try {
+                if (botones.get(x).get(y).getText().charAt(0) == botones.get(x + 1).get(y + 1).getText().charAt(0) && botones.get(x).get(y).getText().charAt(0) == botones.get(x + 2).get(y + 2).getText().charAt(0)) {
+                    return true;
+                }
             }
+            catch (Exception ignored) {}
+            try {
+                if (botones.get(x).get(y).getText().charAt(0) == botones.get(x - 1).get(y - 1).getText().charAt(0) && botones.get(x).get(y).getText().charAt(0) == botones.get(x + 1).get(y + 1).getText().charAt(0)) {
+                    return true;
+                }
+            }
+            catch (Exception ignored) {}
+            try {
+                if (botones.get(x).get(y).getText().charAt(0) == botones.get(x - 1).get(y - 1).getText().charAt(0) && botones.get(x).get(y).getText().charAt(0) == botones.get(x - 2).get(y - 2).getText().charAt(0)) {
+                    return true;
+                }
+            }
+            catch (Exception ignored) {}
+
         } catch (Exception ignored) {
         }
-        System.out.println("no");
         return false;
     }
 

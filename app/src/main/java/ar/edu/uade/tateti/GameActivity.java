@@ -32,7 +32,7 @@ public class GameActivity extends AppCompatActivity {
         ficha = getIntent().getStringExtra("ficha");
         cdj = new ControlDeJuego();
         Jugador = (TextView) findViewById(R.id.Jugador);
-        Jugador.setText(n + "juega con" + ficha);
+        Jugador.setText(n + " juega con " + ficha);
         botonCentro = (Button) findViewById(R.id.botonCentro);
         botonSuperiorCentral = (Button) findViewById(R.id.botonSuperiorCentral);
         botonInferiorCentral = (Button) findViewById(R.id.botonInferiorCentral);
@@ -46,39 +46,76 @@ public class GameActivity extends AppCompatActivity {
 
         botonSuperiorIzquierda.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v,0,0);}
+            public void onClick(View v) {
+                if (botonCentroIzquierda.getText().equals("")) {
+                    controloBoton(v,0,0);
+                }
+
+            }
         });
         botonSuperiorCentral.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v,0,1); }
+            public void onClick(View v) {
+                if (botonSuperiorCentral.getText().equals("")) {
+                    controloBoton(v, 0, 1);
+                }
+            }
         });
         botonSuperiorDerecha.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v,0,2); }
+            public void onClick(View v) {
+                if (botonSuperiorDerecha.getText().equals("")) {
+                controloBoton(v,0,2);
+                }
+            }
         });
         botonCentroIzquierda.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v,1,0); }
+            public void onClick(View v) {
+                if (botonCentroIzquierda.getText().equals("")) {
+                    controloBoton(v, 1, 0);
+                }
+            }
         });
         botonCentro.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v, 1 ,1 ); }
+            public void onClick(View v) {
+                if (botonCentro.getText().equals("")) {
+                    controloBoton(v, 1, 1);
+                }
+            }
         });
         botonInferiorIzquierda.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v,2 , 0); }
+            public void onClick(View v) {
+                if (botonInferiorIzquierda.getText().equals("")) {
+                    controloBoton(v, 2, 0);
+                }
+            }
         });
         botonCentroDerecha.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v, 1,2); }
+            public void onClick(View v) {
+                if (botonCentroDerecha.getText().equals("")) {
+                    controloBoton(v, 1, 2);
+                }
+            }
         });
         botonInferiorCentral.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v, 2, 1); }
+            public void onClick(View v) {
+                if (botonInferiorCentral.getText().equals("")) {
+                    controloBoton(v, 2, 1);
+                }
+            }
         });
         botonInferiorDerecha.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v,2 , 2); }
+            public void onClick(View v) {
+                if (botonInferiorDerecha.getText().equals("")) {
+                    controloBoton(v, 2, 2);
+                }
+            }
         });
     }
 

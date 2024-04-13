@@ -12,18 +12,19 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="93dp"
-            android:layout_height="31dp"
-            android:layout_marginStart="181dp"
+            android:layout_width="154dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="70dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="182dp"
+            android:layout_marginEnd="60dp"
             android:layout_marginBottom="692dp"
             android:text="TaTeTi"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="50sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.355"
+            app:layout_constraintHorizontal_bias="0.456"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
@@ -36,11 +37,15 @@
             android:layout_marginTop="302dp"
             android:layout_marginEnd="159dp"
             android:text="JUGAR"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.481"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.303" />
 
         <EditText
             android:id="@+id/nombre"
@@ -50,33 +55,44 @@
             android:hint="Nombre"
             android:inputType="text|textPersonName"
             android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/boton"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintVertical_bias="0.607" />
+            app:layout_constraintVertical_bias="0.173" />
 
         <RadioGroup
             android:id="@+id/selector"
-            android:layout_width="139dp"
-            android:layout_height="87dp"
-            android:layout_marginStart="8dp"
+            android:layout_width="149dp"
+            android:layout_height="145dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/boton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <RadioButton
-                android:id="@+id/cruz"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="cruz (x)" />
+                android:id="@+id/circulo"
+                android:layout_width="148dp"
+                android:layout_height="70dp"
+                android:text="circulo"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <RadioButton
-                android:id="@+id/circulo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="circulo (0)" />
+                android:id="@+id/cruz"
+                android:layout_width="148dp"
+                android:layout_height="73dp"
+                android:text="cruz"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
         </RadioGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
