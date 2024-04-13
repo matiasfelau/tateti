@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
 
 
 public class GameActivity extends AppCompatActivity {
@@ -93,8 +94,8 @@ public class GameActivity extends AppCompatActivity {
             if (cdj.gano(x, y,botonCentro, botonSuperiorCentral, botonInferiorCentral, botonCentroIzquierda, botonCentroDerecha, botonSuperiorDerecha, botonSuperiorIzquierda, botonInferiorDerecha, botonInferiorIzquierda)) {
                 Ganador.setText("El ganador es "+ n);
             } else {
-                cdj.proximoMovimiento(ficha,botonCentro, botonSuperiorCentral, botonInferiorCentral, botonCentroIzquierda, botonCentroDerecha, botonSuperiorDerecha, botonSuperiorIzquierda, botonInferiorDerecha, botonInferiorIzquierda);
-                if (cdj.gano(x, y,botonCentro, botonSuperiorCentral, botonInferiorCentral, botonCentroIzquierda, botonCentroDerecha, botonSuperiorDerecha, botonSuperiorIzquierda, botonInferiorDerecha, botonInferiorIzquierda)){
+                List<Integer> lugar = cdj.proximoMovimiento(ficha,botonCentro, botonSuperiorCentral, botonInferiorCentral, botonCentroIzquierda, botonCentroDerecha, botonSuperiorDerecha, botonSuperiorIzquierda, botonInferiorDerecha, botonInferiorIzquierda);
+                if (cdj.gano(lugar.get(0), lugar.get(1),botonCentro, botonSuperiorCentral, botonInferiorCentral, botonCentroIzquierda, botonCentroDerecha, botonSuperiorDerecha, botonSuperiorIzquierda, botonInferiorDerecha, botonInferiorIzquierda)){
                     Ganador.setText("El ganador es la maquina");
                 }
                 esMiTurno = true;
