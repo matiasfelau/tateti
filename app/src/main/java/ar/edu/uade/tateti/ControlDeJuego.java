@@ -43,10 +43,7 @@ public class ControlDeJuego {
 
         try {
             System.out.println("horizontal");
-            System.out.println(botones.get(x).get(y).getText().toString().getClass());
-            if (botones.get(x).get(y).getText().toString().equals(botones.get(x).get(y).toString())) {
-                System.out.println("probando");
-            }
+            System.out.println(botones.get(x).get(y).getText().charAt(0) == botones.get(x).get(y).getText().charAt(0));
             if (botones.get(x).get(y).getText().equals(botones.get(x).get(y + 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x).get(y + 2).getText())
                     || botones.get(x).get(y).getText().equals(botones.get(x).get(y - 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x).get(y + 1).getText()) ||
                     botones.get(x).get(y).getText().equals(botones.get(x).get(y - 1).getText()) && botones.get(x).get(y).getText().equals(botones.get(x).get(y - 2).getText())) {
