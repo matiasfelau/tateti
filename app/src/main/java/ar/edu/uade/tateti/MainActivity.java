@@ -1,8 +1,13 @@
-package ar.edu.uade.tateti.activities;
+package ar.edu.uade.tateti;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import ar.edu.uade.tateti.GameActivity;
 
@@ -16,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button boton = findViewById(R.id.boton);
+        RadioButton circulo = findViewById(R.id.circulo);
+        TextView nombre = findViewById(R.id.nombre);
 
         //llamar variables
 
@@ -30,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 aux.putExtra("nombre", n);
                 if (circulo.isChecked()) {
                     aux.putExtra("ficha", "circulos");
-                } else {
+                } else{
                     aux.putExtra("ficha", "equises");
                 }
                 startActivity(aux);

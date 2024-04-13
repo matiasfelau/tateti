@@ -45,7 +45,7 @@ public class GameActivity extends AppCompatActivity {
 
         botonSuperiorIzquierda.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { controloBoton(v,0,0); }
+            public void onClick(View v) { controloBoton(v,0,0);}
         });
         botonSuperiorCentral.setOnClickListener(new View.OnClickListener() {
             @Override
