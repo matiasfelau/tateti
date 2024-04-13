@@ -5,71 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/Fondo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="90"
-        android:scaleX="3"
-        android:scaleY="3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/purple_poly_background_vector_1482955271" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="77dp"
-        android:layout_height="449dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="128dp"
-        android:scaleX="0.5"
-        android:scaleY="2.3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Jugador"
-        app:srcCompat="@drawable/pngegg" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="77dp"
-        android:layout_height="449dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="68dp"
-        android:scaleX="0.5"
-        android:scaleY="2.3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pngegg" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="77dp"
-        android:layout_height="449dp"
-        android:rotation="90"
-        android:scaleX="0.5"
-        android:scaleY="2.3"
-        app:layout_constraintBottom_toBottomOf="@+id/Fondo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Fondo"
-        app:layout_constraintVertical_bias="0.393"
-        app:srcCompat="@drawable/pngegg" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="77dp"
-        android:layout_height="449dp"
-        android:rotation="90"
-        android:scaleX="0.5"
-        android:scaleY="2.3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092"
-        app:srcCompat="@drawable/pngegg" />
-
     <TextView
         android:id="@+id/Jugador"
         android:layout_width="170dp"
@@ -98,7 +33,7 @@
         android:id="@+id/botonCentro"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -112,7 +47,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="172dp"
         android:layout_marginEnd="12dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/botonSuperiorCentral"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +59,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/botonCentro"
         app:layout_constraintTop_toBottomOf="@+id/botonSuperiorIzquierda" />
 
@@ -134,7 +69,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="172dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toEndOf="@+id/botonSuperiorCentral"
@@ -146,7 +81,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="168dp"
         android:layout_marginTop="12dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonCentro" />
 
@@ -156,7 +91,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.021"
@@ -170,7 +105,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/botonCentro"
@@ -182,7 +117,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="168dp"
         android:layout_marginBottom="12dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/botonCentro"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -192,7 +127,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/botonInferiorCentral"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

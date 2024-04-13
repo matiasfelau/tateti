@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 if (n.isEmpty()) {
                     n = "Invitado";
                 }
-                aux.putExtra("nombre", n);
+                aux.putExtra("n", n);
                 if (circulo.isChecked()) {
                     aux.putExtra("ficha", "circulos");
                 } else{
