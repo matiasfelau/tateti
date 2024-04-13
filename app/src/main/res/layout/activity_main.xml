@@ -55,7 +55,7 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintVertical_bias="0.836" />
+            app:layout_constraintVertical_bias="0.607" />
 
         <RadioGroup
             android:id="@+id/selector"
@@ -70,13 +70,13 @@
                 android:id="@+id/cruz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="cruz X" />
+                android:text="cruz (x)" />
 
             <RadioButton
                 android:id="@+id/circulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="circulo (◯)" />
+                android:text="circulo (0)" />
         </RadioGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
