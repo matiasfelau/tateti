@@ -50,7 +50,7 @@ public class GameActivity extends AppCompatActivity {
         botonSuperiorIzquierda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (botonCentroIzquierda.getText().equals("")) {
+                if (botonSuperiorIzquierda.getText().equals("")) {
                     controloBoton(v,0,0);
                 }
 
