@@ -124,7 +124,6 @@ public class GameActivity extends AppCompatActivity {
 
     private void controloBoton(View v, int x, int y){
         c++;
-        if (c < 9)
         if (esMiTurno){
             Button selec = (Button) v;
             if(ficha.equalsIgnoreCase("circulos"))
